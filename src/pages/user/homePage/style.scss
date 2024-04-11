@@ -1,0 +1,42 @@
+@use "sass:map";
+@import '../../../styles/pages/theme';
+
+.container__categories__slider{
+    max-width: 1170px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 30px;
+
+    .categories__slider{
+        .categories__slider__item{
+            height: 300px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            border-radius: 5px;
+            margin:30px;
+        
+            p{
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                text-align: center;
+                font-size: 18px;
+                color: map.get($theme-color,"normai-text");
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 12px 0 10px;
+                width: 270px;
+                cursor: pointer;
+                transform: translateX(-50%); // Đảm bảo căn giữa theo chiều ngang
+        
+                &:hover{
+                    background: rgb(237 237 237);
+                }
+            }
+        }
+    }        
+}

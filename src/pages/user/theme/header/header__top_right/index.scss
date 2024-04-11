@@ -1,0 +1,28 @@
+@use "sass:map";
+@import "../../../../../styles/pages/all";
+
+.header__top_right {
+
+    ul {
+        display: flex;
+        column-gap: 5px;
+        list-style: none;
+        justify-content: flex-end;
+    }
+
+    a{
+        font-size: 14px;
+        display: inline-block;
+        color:map.get($theme-color,"normal-text")
+    }
+
+    li:last-child{
+        cursor:pointer;
+        margin-left: 4px;
+
+        span{
+            font-size: 14px;
+            margin-left: 2px;
+        }
+    }
+}

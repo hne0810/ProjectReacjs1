@@ -1,0 +1,37 @@
+@use "sass:map";
+@import "../../../../../styles/pages/all";
+
+.header__top_left{
+    ul{
+        display: flex;
+        column-gap: 10px;
+        padding: 10 0 13px;
+        align-items: center;
+        list-style: none;
+        column-gap: 10px;
+        
+        li{
+            font-size: 14px;
+            color:map.get($theme-color,"normal-text");
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+        }
+
+        li:first-child{
+            position: relative;
+
+            &:after{
+                position: absolute;
+                right: -6px;
+                top: 1px;
+                height: 20px;
+                width: 1px;
+                background: black;
+                opacity: 0.1;
+                content:""
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,105 @@
+@use "sass:map";
+@import "../../../../../styles/pages/theme";
+
+.header__cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+
+    ul{
+        display: flex;
+        margin-right: 25px;
+
+        li{
+            list-style: none;
+            position: relative;
+            margin-left: 20px;
+
+            svg{
+                font-size: 25px;
+                color: map.get($theme_color,"normal-text");
+            }
+
+            span{
+                color:white;
+                background:map.get($theme_color,"main") ;
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                text-align: center;
+                line-height: 20px;
+                font-size: 13px;
+                font-weight: 500px;
+                left:20px;
+                top:2px;
+            }
+        }
+    }
+}
+
+.header__logo{
+    padding: 15px 0 ;
+}
+
+.header__menu{
+    padding: 24px 0;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+
+        li{
+            list-style: none;
+            position: relative;
+
+            a{
+                text-decoration: none;
+                font-size: 14px;
+                color:map.get($theme_color,"bold-text");
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+                transition: all 0.3s;
+                padding: 5px 0 ;
+                display: block;
+            }
+        }
+
+        li:hover .header__menu__dropdown{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .active{
+            color:map.get($theme_color,"main");
+        }
+
+        .header__menu__dropdown{
+            background: #222222;
+            display: block;
+            position: absolute;
+            width: 180px;
+            z-index: 9;
+            padding: 5px 0;
+            transition: all, 0.3s;
+            opacity: 0;
+            visibility: hiden;
+
+            li{
+                a{
+                    text-transform: capitalize;
+                    color: #fff;
+                    font-weight: 400;
+                    padding: 5px 15px;
+                }
+
+                :hover{
+                    color: map.get($theme_color,"main");
+                }
+            }
+        }
+    }
+}
